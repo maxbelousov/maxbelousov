@@ -31,7 +31,7 @@ function setScrollHeader() {
 ;
 
 function getImgSliderSlide(imgPath) {
-  return '<div class="swiper-slide"><div class="img-slide"><div class="img-slide__bg"></div><div class="img-slide__main" data-swiper-parallax-opacity="0.2"><div class="img-slide__img left"><img src="' + imgPath + '"></div><div class="img-slide__img right"><img src="' + imgPath + '"></div></div></div></div>';
+  return '<div class="swiper-slide"><a class="img-slide" data-fancybox href="' + imgPath + '"><div class="img-slide__bg"></div><div class="img-slide__main" data-swiper-parallax-opacity="0.2"><div class="img-slide__img left"><img src="' + imgPath + '"></div><div class="img-slide__img right"><img src="' + imgPath + '"></div></div></a></div>';
 }
 
 $(function () {
@@ -41,9 +41,6 @@ $(function () {
     var content = pcard.find('.pcard__content');
     var isActive = pcard.hasClass('is-active');
     pcard.toggleClass('is-active');
-    console.log({
-      isActive: isActive
-    });
 
     if (isActive) {
       collapse(content);
@@ -154,6 +151,10 @@ $(function () {
   });
   $('.js-order-form').submit(function (e) {
     e.preventDefault();
+    var formData = $(this).serialize();
+    console.log({
+      formData: formData
+    });
     $('#order-modal.is-active').removeClass('is-active');
     $('#thanks-modal').addClass('is-active');
   });
@@ -179,5 +180,11 @@ $(function () {
       scrollTop: top
     }, 500);
   });
+  $().fancybox({
+    selector: '[data-fancybox]',
+    animationEffect: "zoom-in-out",
+    buttons: ["zoom", "close"]
+  });
+  $('[type="phone"]').mask("8 (999) 999-99-99");
 });
 //# sourceMappingURL=main.js.map
