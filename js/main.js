@@ -185,6 +185,6 @@ $(function () {
     animationEffect: "zoom-in-out",
     buttons: ["zoom", "close"]
   });
-  $('[type="phone"]').mask("8 (999) 999-99-99");
+  $('[type="tel"]').mask("8 (999) 999-99-99");
 });
 //# sourceMappingURL=main.js.map
