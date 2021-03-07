@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>Catalog</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"><!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
+  </head>
+  <body class="wrapper" id="js-gallery">
+    <main class="wrapper__main">
+      <div class="menu">
+        <div class="menu__backdrop js-close-menu"></div>
+        <div class="menu__content">
+          <div class="menu__content-inner">
+            <div class="menu__head">
+              <div class="searchform menu__search">
+                <input class="textfield searchform__field" type="text" placeholder="Поиск">
+                <button class="searchform__submit">
+                  <svg>
+                    <use xlink:href="/img/sprites/symbol/sprite.svg#search"></use>
+                  </svg>
+                </button>
+              </div>
+              <button class="menu__close js-close-menu">
+                <svg>
+                  <use xlink:href="/img/sprites/symbol/sprite.svg#close"></use>
+                </svg>
+              </button>
+            </div>
+            <ul class="menu__nav"> 
+              <li class="has-submenu"><a href="#"><span><span>Каталог автостёкол</span>
+                    <svg>
+                      <use xlink:href="/img/sprites/symbol/sprite.svg#chevron-right"></use>
+                    </svg></span></a>
+                <ul> 
+                  <li>
+                    <button class="back"><span>
+                        <svg>
+                          <use xlink:href="/img/sprites/symbol/sprite.svg#chevron-left"></use>
+                        </svg><span>Назад</span></span></button>
+                  </li>
+                  <li><a href="#">Для легковых автомобилей</a></li>
+                  <li><a href="#">Для грузовых автомобилей</a></li>
+                  <li><a href="#">Для спецтехники</a></li>
+                  <li><a href="#">Микроавтобусы</a></li>
+                </ul>
+              </li>
+              <li class="has-submenu"><a href="#"><span><span>Услуги</span>
+                    <svg>
+                      <use xlink:href="/img/sprites/symbol/sprite.svg#chevron-right"></use>
+                    </svg></span></a>
+                <ul>
+                  <li>
+                    <button class="back"><span>
+                        <svg>
+                          <use xlink:href="/img/sprites/symbol/sprite.svg#chevron-left"></use>
+                        </svg><span>Назад</span></span></button>
+                  </li>
+                  <li><a href="#">Замена автостекол</a></li>
+                  <li><a href="#">Ремонт сколов и трещин</a></li>
+                  <li><a href="#">Тонировка автостекол</a></li>
+                  <li><a href="#">Бронирование кузова</a></li>
+                  <li><a href="#">Полировка стёкол и фар</a></li>
+                  <li><a href="#">Антидождь</a></li>
+                </ul>
+              </li>
+              <li><a href="#"><span>Оплата и гарантия </span></a></li>
+              <li><a href="#"><span>Наши работы</span></a></li>
+              <li><a href="#"><span>Контакты</span></a></li>
+            </ul>
+            <div class="menu__footer"> 
+              <div class="header-contacts">
+                <div class="header-contacts__socials"><a href="#">
+                    <svg>
+                      <use xlink:href="/img/sprites/symbol/sprite.svg#vk"></use>
+                    </svg></a><a href="#">
+                    <svg>
+                      <use xlink:href="/img/sprites/symbol/sprite.svg#instagramm"></use>
+                    </svg></a><a href="#">
+                    <svg>
+                      <use xlink:href="/img/sprites/symbol/sprite.svg#watsapp"></use>
+                    </svg></a></div>
+                <div class="header-contacts__phone"><a href="#">
+                    <svg>
+                      <use xlink:href="/img/sprites/symbol/sprite.svg#call-phone"></use>
+                    </svg><span>+7 (495) 920-80-77</span></a></div>
+                <div class="header-contacts__info"><span><strong>Пн-Пт:</strong> 9.00-19.00</span><span><strong>Сб:</strong> 9.00-17.00</span><span><strong>Вс:</strong> выходной</span></div>
+                <div class="header-contacts__callback">
+                  <button class="btn btn-accent js-open-modal" data-modal="#modal-callback"><span class="btn__content">Заказать звонок</span><span class="btn__icon">
+                      <svg>
+                        <use xlink:href="/img/sprites/symbol/sprite.svg#call-phone"></use>
+                      </svg></span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <header class="header">
+        <div class="container header__container">
+          <div class="header__top"> 
+            <button class="header__menu-btn js-open-menu"><span></span></button><a class="header__logo" href="#"><img src="img/icons/logo.svg"></a>
+            <div class="header__address">
+              Продажа и замена автостёкол,<br>
+              тонировка, антидождь, бронирование кузова<br>
+              г. Пушкино, ул. Учинская д.6
+            </div>
+            <form class="header__search">
+              <div class="searchform">
+                <input class="textfield searchform__field" type="text" placeholder="Поиск">
+                <button class="searchform__submit">
+                  <svg>
+                    <use xlink:href="/img/sprites/symbol/sprite.svg#search"></use>
+                  </svg>
+                </button>
+              </div>
+            </form>
+            <div class="header-contacts header-contacts--md-compact">
+              <div class="header-contacts__socials"><a href="#">
+                  <svg>
+                    <use xlink:href="/img/sprites/symbol/sprite.svg#vk"></use>
+                  </svg></a><a href="#">
+                  <svg>
+                    <use xlink:href="/img/sprites/symbol/sprite.svg#instagramm"></use>
+                  </svg></a><a href="#">
+                  <svg>
+                    <use xlink:href="/img/sprites/symbol/sprite.svg#watsapp"></use>
+                  </svg></a></div>
+              <div class="header-contacts__phone"><a href="#">
+                  <svg>
+                    <use xlink:href="/img/sprites/symbol/sprite.svg#call-phone"></use>
+                  </svg><span>+7 (495) 920-80-77</span></a></div>
+              <div class="header-contacts__info"><span><strong>Пн-Пт:</strong> 9.00-19.00</span><span><strong>Сб:</strong> 9.00-17.00</span><span><strong>Вс:</strong> выходной</span></div>
+              <div class="header-contacts__callback">
+                <button class="btn btn-accent js-open-modal" data-modal="#modal-callback"><span class="btn__content">Заказать звонок</span><span class="btn__icon">
+                    <svg>
+                      <use xlink:href="/img/sprites/symbol/sprite.svg#call-phone"></use>
+                    </svg></span></button>
+              </div>
+            </div>
+          </div>
+          <nav>
+            <ul class="header__menu"> 
+              <li class="has-submenu"><a href="#"><span>Каталог автостёкол
+                    <svg>
+                      <use xlink:href="/img/sprites/symbol/sprite.svg#chevron-bottom"></use>
+                    </svg></span></a>
+                <ul> 
+                  <li><a href="#">Для легковых автомобилей</a></li>
+                  <li><a href="#">Для грузовых автомобилей</a></li>
+                  <li><a href="#">Для спецтехники</a></li>
+                  <li><a href="#">Микроавтобусы</a></li>
+                </ul>
+              </li>
+              <li class="has-submenu">   <a href="#"><span>Услуги
+                    <svg>
+                      <use xlink:href="/img/sprites/symbol/sprite.svg#chevron-bottom"></use>
+                    </svg></span></a>
+                <ul>
+                  <li><a href="#">Замена автостекол</a></li>
+                  <li><a href="#">Ремонт сколов и трещин</a></li>
+                  <li><a href="#">Тонировка автостекол</a></li>
+                  <li><a href="#">Бронирование кузова</a></li>
+                  <li><a href="#">Полировка стёкол и фар</a></li>
+                  <li><a href="#">Антидождь</a></li>
+                </ul>
+              </li>
+              <li><a href="#"><span>Оплата и гарантия </span></a></li>
+              <li><a href="#"><span>Наши работы</span></a></li>
+              <li><a href="#"><span>Контакты</span></a></li>
+              <li><a class="header__cart" href="#">
+                  <svg>
+                    <use xlink:href="/img/sprites/symbol/sprite.svg#cart"></use>
+                  </svg><span>2    </span></a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <section class="breadcrumbs"> 
+        <div class="container"> 
+          <ul class="breadcrumbs__list">
+            <li><a href="#">
+                <svg>
+                  <use xlink:href="/img/sprites/symbol/sprite.svg#home"></use>
+                </svg><span>Главная</span></a></li>
+            <li><a href="#">Услуги</a></li>
+            <li>Замена автостёкол в городе Пушкино</li>
+          </ul>
+        </div>
+      </section>
+      <section class="catalog-head"> 
+        <div class="container"> 
+          <h2>Австостёкла в городе Пушкино </h2>
+          <p>На этой странице сайта вы можете заранее выбрать автостекло для замены, а затем приехать и установить выбранное на автомобиль. Внизу страницы вы можете ознакомиться с краткими характеристиками (описанием) по каждому производителю. Если у вас возникнут вопросы, то свяжитесь с нами любым удобным способом и мы поможем с решением. </p>
+          <div class="help help--with-border"> 
+            <div class="help__icon">
+              <svg>
+                <use xlink:href="/img/sprites/symbol/sprite.svg#help"></use>
+              </svg>
+            </div>
+            <div class="help__text">Если Вы не нашли нужной позиции в каталоге, то обязательно наберите нам по телефону 8 (495) 920-80-77</div>
+          </div>
+        </div>
+      </section>
+      <section class="catalog padding-lg padding-lg--no-padding-top">
+        <div class="container"> 
+          <div class="catalog__grid">
+            <div class="catalog__filters">
+              <div class="filters"> 
+                <div class="filters__head"> 
+                  <h3>Фильтры</h3>
+                  <button class="filters__close js-close-filters">
+                    <svg>
+                      <use xlink:href="/img/sprites/symbol/sprite.svg#close"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="filters__group is-open">
+                  <div class="filters__toggle-group"><span>По назначению</span>
+                    <svg>
+                      <use xlink:href="/img/sprites/symbol/sprite.svg#chevron-bottom"></use>
+                    </svg>
+                  </div>
+                  <div class="filters__group-items-wrap">
+                    <div class="filters__group-items"> 
+                      <label class="checkbox" for="ckbx1-1">
+                        <input type="checkbox" id="ckbx1-1"><i></i><span>Легковые машины <span class="text-secondary">(345)</span></span>
+                      </label>
+                      <label class="checkbox" for="ckbx1-2">
+                        <input type="checkbox" id="ckbx1-2"><i></i><span>Грузовые машины <span class="text-secondary">(345)</span></span>
+                      </label>
+                      <label class="checkbox" for="ckbx1-3">
+                        <input type="checkbox" id="ckbx1-3"><i></i><span>Микроавтобусы <span class="text-secondary">(345)</span></span>
+                      </label>
+                      <label class="checkbox" for="ckbx1-4">
+                        <input type="checkbox" id="ckbx1-4"><i></i><span>Спецтехника <span class="text-secondary">(345)</span></span>
+                      </label>
+                      <label class="checkbox" for="ckbx1-5">
+                        <input type="checkbox" id="ckbx1-5"><i></i><span>Легковые машины <span class="text-secondary">(345)</span></span>
+                      </label>
+                      <label class="checkbox" for="ckbx1-6">
+                        <input type="checkbox" id="ckbx1-6"><i></i><span>Грузовые машины <span class="text-secondary">(345)</span></span>
+                      </label>
+                      <label class="checkbox" for="ckbx1-7">
+                        <input type="checkbox" id="ckbx1-7"><i></i><span>Микроавтобусы <span class="text-secondary">(345)</span></span>
+                      </label>
+                      <label class="checkbox" for="ckbx1-8">
+                        <input type="checkbox" id="ckbx1-8"><i></i><span>Спецтехника <span class="text-secondary">(345)</span></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="filters__group">
+                  <div class="filters__toggle-group"><span>Марка</span>
+                    <svg>
+                      <use xlink:href="/img/sprites/symbol/sprite.svg#chevron-bottom"></use>
+                    </svg>
+                  </div>
+                  <div class="filters__group-items-wrap">
+                    <div class="filters__group-items"> 
+                      <label class="checkbox" for="ckbx2-1">
+                        <input type="checkbox" id="ckbx2-1"><i></i><span>ACURA <span class="text-secondary">(345)</span></span>
+                      </label>
+                      <label class="checkbox" for="ckbx2-2">
+                        <input type="checkbox" id="ckbx2-2"><i></i><span>ALFA ROMEO <span class="text-secondary">(345)</span></span>
+                      </label>
+                      <label class="checkbox" for="ckbx2-3">
+                        <input type="checkbox" id="ckbx2-3"><i></i><span>AUDI <span class="text-secondary">(345)</span></span>
+                      </label>
+                      <label class="checkbox" for="ckbx2-4">
+                        <input type="checkbox" id="ckbx2-4"><i></i><span>BMW <span class="text-secondary">(345)</span></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="filters__group is-disabled">
+                  <div class="filters__toggle-group"><span>Модель <span class="sm">(Выберите марку)</span></span>
+                    <svg>
+                      <use xlink:href="/img/sprites/symbol/sprite.svg#chevron-bottom"></use>
+                    </svg>
+                  </div>
+                  <div class="filters__group-items-wrap">
+                    <div class="filters__group-items"> 
+                      <label class="checkbox" for="ckbx3-1">
+                        <input type="checkbox" id="ckbx3-1"><i></i><span>1 <span class="text-secondary">(345)</span></span>
+                      </label>
+                      <label class="checkbox" for="ckbx3-2">
+                        <input type="checkbox" id="ckbx3-2"><i></i><span>2 <span class="text-secondary">(345)</span></span>
+                      </label>
+                      <label class="checkbox" for="ckbx3-3">
+                        <input type="checkbox" id="ckbx3-3"><i></i><span>3 <span class="text-secondary">(345)</span></span>
+                      </label>
+                      <label class="checkbox" for="ckbx3-4">
+                        <input type="checkbox" id="ckbx3-4"><i></i><span>4 <span class="text-secondary">(345)</span></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="filters__group is-disabled">
+                  <div class="filters__toggle-group"><span>Год выпуска  <span class="sm">(Выберите модель)</span></span>
+                    <svg>
+                      <use xlink:href="/img/sprites/symbol/sprite.svg#chevron-bottom"></use>
+                    </svg>
+                  </div>
+                  <div class="filters__group-items-wrap">
+                    <div class="filters__group-items"> 
+                      <label class="checkbox" for="ckbx4-1">
+                        <input type="checkbox" id="ckbx4-1"><i></i><span>1 <span class="text-secondary">(345)</span></span>
+                      </label>
+                      <label class="checkbox" for="ckbx4-2">
+                        <input type="checkbox" id="ckbx4-2"><i></i><span>2 <span class="text-secondary">(345)</span></span>
+                      </label>
+                      <label class="checkbox" for="ckbx4-3">
+                        <input type="checkbox" id="ckbx4-3"><i></i><span>3 <span class="text-secondary">(345)</span></span>
+                      </label>
+                      <label class="checkbox" for="ckbx4-4">
+                        <input type="checkbox" id="ckbx4-4"><i></i><span>4 <span class="text-secondary">(345)</span></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="filters__group is-open">
+                  <div class="filters__toggle-group"><span>Тип стекла</span>
+                    <svg>
+                      <use xlink:href="/img/sprites/symbol/sprite.svg#chevron-bottom"></use>
+                    </svg>
+                  </div>
+                  <div class="filters__group-items-wrap">
+                    <div class="filters__group-items"> 
+                      <label class="checkbox" for="ckbx5-1">
+                        <input type="checkbox" id="ckbx5-1"><i></i><span>Лобовое <span class="text-secondary">(345)</span></span>
+                      </label>
+                      <label class="checkbox" for="ckbx5-2">
+                        <input type="checkbox" id="ckbx5-2"><i></i><span>Боковое <span class="text-secondary">(345)</span></span>
+                      </label>
+                      <label class="checkbox" for="ckbx5-3">
+                        <input type="checkbox" id="ckbx5-3"><i></i><span>Заднее <span class="text-secondary">(345)</span></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="filters__group is-open">
+                  <div class="filters__toggle-group"><span>Производитель </span>
+                    <svg>
+                      <use xlink:href="/img/sprites/symbol/sprite.svg#chevron-bottom"></use>
+                    </svg>
+                  </div>
+                  <div class="filters__group-items-wrap">
+                    <div class="filters__group-items"> 
+                      <label class="checkbox" for="ckbx6-1">
+                        <input type="checkbox" id="ckbx6-1"><i></i><span>KMK Glass <span class="text-secondary">(345)</span></span>
+                      </label>
+                      <label class="checkbox" for="ckbx6-2">
+                        <input type="checkbox" id="ckbx6-2"><i></i><span>KMK Glass <span class="text-secondary">(345)</span></span>
+                      </label>
+                      <label class="checkbox" for="ckbx6-3">
+                        <input type="checkbox" id="ckbx6-3"><i></i><span>KMK Glass <span class="text-secondary">(345)</span></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="filters__buttons">
+                  <button class="btn filters__accept">
+                    <div class="btn__content">Применить</div>
+                  </button>
+                  <button class="btn btn-with-border">
+                    <div class="btn__content">Сбросить фильтры</div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="catalog__main">
+              <div class="catalog__main-head"> 
+                <button class="btn btn-with-border catalog__filter-btn js-open-filters">
+                  <div class="btn__content">Фильтр</div>
+                </button>
+                <div class="select"> 
+                  <button class="select__toggle"><span>По цене</span>
+                    <svg>
+                      <use xlink:href="/img/sprites/symbol/sprite.svg#asc"></use>
+                    </svg>
+                  </button>
+                  <div class="select__options">
+                    <div class="select__option is-active"> <span>По цене</span>
+                      <svg>
+                        <use xlink:href="/img/sprites/symbol/sprite.svg#asc"></use>
+                      </svg>
+                    </div>
+                    <div class="select__option"><span>По дате</span>
+                      <svg>
+                        <use xlink:href="/img/sprites/symbol/sprite.svg#asc"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__show-by"> <span>Показать<span class="d-none-sm"> по</span>:</span><a href="#">20</a><a class="is-active" href="#">60</a><a href="#">Все</a></div>
+              </div>
+              <div class="catalog__items"> 
+                <div class="prod-card"> 
+                  <div class="prod-card__head">
+                    <div class="prod-card__logo"><img src="img/image-18.png"></div>
+                    <div class="prod-card__title">Лобовое стекло для Alfa Romeo 156 4D Sed (97-) 5D Sport Wagon (00-) (Датчик дождя)</div>
+                  </div>
+                  <div class="prod-card__params"> 
+                    <div class="prod-card__params-1"> 
+                      <div class="prod-card__param-1"><strong>Артикул:</strong> <span>8633AGNCMVZ LFW/X</span></div>
+                      <div class="prod-card__param-1"><strong>Модель:</strong> <span>Alfa Romeo</span></div>
+                      <div class="prod-card__param-1"><strong>Год выпуска:</strong> <span>2021</span></div>
+                      <div class="prod-card__param-1"><strong>Производитель:</strong> <span>KMK Glass</span></div>
+                      <div class="prod-card__param-1"><strong>Еврокод:</strong> <span>3990AGNBLV</span></div>
+                    </div>
+                    <div class="prod-card__params-2">
+                      <div class="prod-card__param-2"><strong>Датчик дождя:</strong> <span>да</span></div>
+                      <div class="prod-card__param-2"><strong>Молдинг:</strong> <span>да</span></div>
+                      <div class="prod-card__param-2"><strong>Камера:</strong> <span>да</span></div>
+                      <div class="prod-card__param-2"><strong>Обогрев:</strong> <span>да</span></div>
+                      <div class="prod-card__param-2"><strong>Проекция:</strong> <span>да</span></div>
+                      <div class="prod-card__param-2"><strong>Цвет стекла:</strong> <span>черный</span></div>
+                    </div>
+                  </div>
+                  <div class="prod-card__footer"> 
+                    <div class="prod-card__price"> <strong>14 000 ₽</strong>
+                      <div class="prod-card__price-info">Замена от 1000 ₽</div>
+                    </div>
+                    <button class="btn"><span class="btn__content">В корзину</span><span class="btn__icon">
+                        <svg>
+                          <use xlink:href="/img/sprites/symbol/sprite.svg#cart"></use>
+                        </svg></span></button>
+                  </div>
+                </div>
+                <div class="prod-card"> 
+                  <div class="prod-card__head">
+                    <div class="prod-card__logo"><img src="img/image-18.png"></div>
+                    <div class="prod-card__title">Лобовое стекло для Alfa Romeo 156 4D Sed (97-) 5D Sport Wagon (00-) (Датчик дождя)</div>
+                  </div>
+                  <div class="prod-card__params"> 
+                    <div class="prod-card__params-1"> 
+                      <div class="prod-card__param-1"><strong>Артикул:</strong> <span>8633AGNCMVZ LFW/X</span></div>
+                      <div class="prod-card__param-1"><strong>Модель:</strong> <span>Alfa Romeo</span></div>
+                      <div class="prod-card__param-1"><strong>Год выпуска:</strong> <span>2021</span></div>
+                      <div class="prod-card__param-1"><strong>Производитель:</strong> <span>KMK Glass</span></div>
+                      <div class="prod-card__param-1"><strong>Еврокод:</strong> <span>3990AGNBLV</span></div>
+                    </div>
+                    <div class="prod-card__params-2">
+                      <div class="prod-card__param-2"><strong>Датчик дождя:</strong> <span>да</span></div>
+                      <div class="prod-card__param-2"><strong>Молдинг:</strong> <span>да</span></div>
+                      <div class="prod-card__param-2"><strong>Камера:</strong> <span>да</span></div>
+                      <div class="prod-card__param-2"><strong>Обогрев:</strong> <span>да</span></div>
+                      <div class="prod-card__param-2"><strong>Проекция:</strong> <span>да</span></div>
+                      <div class="prod-card__param-2"><strong>Цвет стекла:</strong> <span>черный</span></div>
+                    </div>
+                  </div>
+                  <div class="prod-card__footer"> 
+                    <div class="prod-card__price"> <strong>14 000 ₽</strong>
+                      <div class="prod-card__price-info">Замена от 1000 ₽</div>
+                    </div>
+                    <button class="btn"><span class="btn__content">В корзину</span><span class="btn__icon">
+                        <svg>
+                          <use xlink:href="/img/sprites/symbol/sprite.svg#cart"></use>
+                        </svg></span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="catalog__main-footer">
+                <div class="select"> 
+                  <button class="select__toggle"><span>По цене</span>
+                    <svg>
+                      <use xlink:href="/img/sprites/symbol/sprite.svg#asc"></use>
+                    </svg>
+                  </button>
+                  <div class="select__options">
+                    <div class="select__option is-active"> <span>По цене</span>
+                      <svg>
+                        <use xlink:href="/img/sprites/symbol/sprite.svg#asc"></use>
+                      </svg>
+                    </div>
+                    <div class="select__option"><span>По дате</span>
+                      <svg>
+                        <use xlink:href="/img/sprites/symbol/sprite.svg#asc"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog__show-by"> <span>Показать<span class="d-none-sm"> по</span>:</span><a href="#">20</a><a class="is-active" href="#">60</a><a href="#">Все</a></div>
+              </div>
+              <div class="pagination"> <a href="#">1    </a><a href="#">2    </a><a class="is-active" href="#">3    </a><a href="#">4    </a><a href="#">
+                  <svg>
+                    <use xlink:href="/img/sprites/symbol/sprite.svg#chevron-right"></use>
+                  </svg></a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="padding-lg bg-gray bg-right"> 
+        <div class="container"> 
+          <div class="brands-info"> 
+            <div class="brands-info__item"><strong>Fyo:</strong> стекла лобовые, задние, боковые. Предлагаем стекла с подогревом, атермальные (не нужно впоследствии клеить атермальную пленку), с защитой от инфракрасного излучения, ламинированные, гидрофобные (дольше остаются чистыми)</div>
+            <div class="brands-info__item"><strong>Benson:</strong> стекла лобовые и боковые практически для всех марок автомашин двух видов – ламинированные прозрачной пленкой и закаленные, когда при повреждении отсутствуют осколки. Низкая цена по сравнению со стеклами от других производителей, так как компания китайская</div>
+            <div class="brands-info__item"><strong>Pilkington:</strong> изначально британская компания выпускает автостекла, которые отличает высокая ударопрочность, износостойкость, повышенная безопасность, способность отталкивать воду (улучшается видимость во время дождя). Цена Pilkington выше, чем на продукцию других брендов;</div>
+            <div class="brands-info__item"><strong>AGC:</strong> японская по происхождению компания применяет технологию, когда при изготовлении стекла оно нагревается почти до температуры плавления. В итоге стекло от AGC в пять раз превышает прочность обычного закаленного, а при ударе рассыпается на такие осколки, которые не смогут поранить находящихся в салоне и вне его людей. Отсутствует искажение видимости;</div>
+            <div class="brands-info__item"><strong>KMK Glass:</strong> российский производитель выпускает стекла, конкурирующие с импортными в качестве и характеристиках благодаря применению в производстве поливинилбутиральной пленки. Стоимость значительно ниже импортных аналогов; </div>
+            <div class="brands-info__item"><strong>Lemson:</strong> потребительские характеристики стекла от российского производителя за счет более низкой цены, чем у зарубежных брендов, очень часто склоняют автовладельце в пользу именно его. Триплекс от Lemson для легковых автомобилей ничуть не уступает китайским, японским;</div>
+            <div class="brands-info__item"><strong>Securit:</strong> инновационная продукция французского производителя подходит для разных марок автомашин. Инновационность в том, что расширяются функциональные возможности автостекла: наличие элементов подогрева, датчиков дождя и света, которые автоматически включают лобовой очиститель или свет;</div>
+            <div class="brands-info__item"><strong>Nord Glass:</strong> польская компания поставляет на рынок стекла с размещенной между двумя слоями стекла антенной, солнцезащитной полоской, подогревом, оснащает датчиками, применят шелкографию и все это при повышенной сопротивляемости механическим нагрузкам;</div>
+            <div class="brands-info__item"><strong>XYG:</strong> европейский производитель разместил производство в Китае. Однако этот факт никак не сказывается на качестве и инновационности продукта и применяемых технологий. Стекла изготавливаются из листового стекла и бутиральной ПВХ-пленки, в результате чего обладают твердым поверхностным слоем. </div>
+            <div class="brands-info__btm-text">Выбирайте, сообщайте о выборе, дате приезда к нам. Необходимое вам стекло будет вас ждать. Мы заменим его за считанные часы!</div>
+          </div>
+        </div>
+      </section>
+      <div class="container"> 
+        <div class="map-rating">
+          <div class="map-rating__icon"><img src="img/icons/map-mark.svg"></div><span>Наш рейтинг на <span class="c-accent">Я</span>ндекс.Карты 5 звёзд</span>
+          <div class="rating"><span class="is-active">
+              <svg>
+                <use xlink:href="/img/sprites/symbol/sprite.svg#star"></use>
+              </svg></span><span class="is-active">
+              <svg>
+                <use xlink:href="/img/sprites/symbol/sprite.svg#star"></use>
+              </svg></span><span class="is-active">
+              <svg>
+                <use xlink:href="/img/sprites/symbol/sprite.svg#star"></use>
+              </svg></span><span class="is-active">
+              <svg>
+                <use xlink:href="/img/sprites/symbol/sprite.svg#star"></use>
+              </svg></span><span class="is-active">
+              <svg>
+                <use xlink:href="/img/sprites/symbol/sprite.svg#star"></use>
+              </svg></span></div>
+        </div>
+      </div>
+      <section class="padding-lg"> 
+        <div class="container"> 
+          <div class="capture"> 
+            <div>
+               Если у вас возникли вопросы,<br>
+              то мы с радостью вам поможем
+            </div>
+            <button class="btn btn-accent js-open-modal" data-modal="#modal-callback"><span class="btn__content">Заказать звонок</span><span class="btn__icon">
+                <svg>
+                  <use xlink:href="/img/sprites/symbol/sprite.svg#chevron-right"></use>
+                </svg></span></button>
+            <div><a href="#">+7 (495) 920-80-77     </a></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer bg-dark bg-left">
+      <div class="container">
+        <div class="footer__grid"> 
+          <div class="footer__contacts"> 
+            <h3 class="footer__title">SVP GLASS</h3><a class="footer__contact" href="#">
+              <svg>
+                <use xlink:href="/img/sprites/symbol/sprite.svg#call-phone"></use>
+              </svg><span>+7 (495) 920-80-77</span></a>
+            <div class="footer__contact" href="#">
+              <svg>
+                <use xlink:href="/img/sprites/symbol/sprite.svg#location"></use>
+              </svg><span>г. Пушкино, ул. Учинская д.6</span>
+            </div><a class="footer__contact" href="#">
+              <svg>
+                <use xlink:href="/img/sprites/symbol/sprite.svg#mail"></use>
+              </svg><span>asvpglass@gmail.com</span></a>
+            <div class="footer__socials"><a href="#">
+                <svg>
+                  <use xlink:href="/img/sprites/symbol/sprite.svg#vk"></use>
+                </svg></a><a href="#">
+                <svg>
+                  <use xlink:href="/img/sprites/symbol/sprite.svg#instagramm"></use>
+                </svg></a><a href="#">
+                <svg>
+                  <use xlink:href="/img/sprites/symbol/sprite.svg#watsapp"></use>
+                </svg></a></div>
+          </div>
+          <div class="footer__menu">
+            <div class="footer__menu-cols">
+              <div class="footer__menu-col">
+                <div class="footer__menu-title">Разделы</div>
+                <ul> 
+                  <li><a href="#">Оплата и гарантия</a></li>
+                  <li><a href="#">Наши работы</a></li>
+                  <li><a href="#">Контакты</a></li>
+                </ul>
+              </div>
+              <div class="footer__col-divider">   </div>
+              <div class="footer__menu-col"> 
+                <div class="footer__menu-title">Каталог автостёкол</div>
+                <ul> 
+                  <li><a href="#">Для легковых автомобилей</a></li>
+                  <li><a href="#">Для грузовых автомобилей</a></li>
+                  <li><a href="#">Для спецтехники</a></li>
+                  <li><a href="#">Микроавтобусы</a></li>
+                </ul><a class="footer__menu-btm-link d-none-md" href="#">Политика конфиденциалньости</a>
+              </div>
+              <div class="footer__col-divider">     </div>
+              <div class="footer__menu-col"> 
+                <div class="footer__menu-title">Услуги</div>
+                <ul> 
+                  <li><a href="#">Замена автостекол</a></li>
+                  <li><a href="#">Ремонт сколов и трещин</a></li>
+                  <li><a href="#">Тонировка автостекол</a></li>
+                  <li><a href="#">Бронирование кузова</a></li>
+                  <li><a href="#">Полировка стёкол и фар</a></li>
+                  <li><a href="#">Антидождь</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer__info"> 
+            <div>
+              © «SVP» 2013—2020. Все права защищены<br>
+              ИП Баранов Игорь Вячеславович
+            </div>
+            <div class="d-none d-block-md"><a href="#">Политика конфиденциалньости</a></div>
+            <div>Любое использование материалов с сайта запрещено без письменного разрешения администрации сайта. Указанные на сайте цены не являются публичной офертой могут быть изменены в любое время.</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal" id="modal-callback">
+      <div class="modal__backdrop js-close-modal"></div>
+      <div class="modal__content">
+        <button class="modal__close js-close-modal">
+          <svg>
+            <use xlink:href="/img/sprites/symbol/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <h3 class="modal__title">Заказать обратный звонок</h3>
+        <form class="modal__form">
+          <input class="textfield" type="text" placeholder="Ваше имя">
+          <input class="textfield" type="text" placeholder="Номер телефона">
+          <div class="modal__form-btn">
+            <button class="btn"><span class="btn__content">Заказать звонок</span><span class="btn__icon">
+                <svg>
+                  <use xlink:href="/img/sprites/symbol/sprite.svg#chevron-right"></use>
+                </svg></span></button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal" id="modal-fast-order">
+      <div class="modal__backdrop js-close-modal"></div>
+      <div class="modal__content">
+        <button class="modal__close js-close-modal">
+          <svg>
+            <use xlink:href="/img/sprites/symbol/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <h3 class="modal__title">Быстрый заказ</h3>
+        <form class="modal__form">
+          <input class="textfield" type="text" placeholder="ФИО">
+          <input class="textfield" type="text" placeholder="Номер телефона">
+          <div class="modal__form-btn">
+            <button class="btn"><span class="btn__content">Быстрый заказ</span><span class="btn__icon">
+                <svg>
+                  <use xlink:href="/img/sprites/symbol/sprite.svg#chevron-right"></use>
+                </svg></span></button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal" id="modal-help">
+      <div class="modal__backdrop js-close-modal"></div>
+      <div class="modal__content">
+        <button class="modal__close js-close-modal">
+          <svg>
+            <use xlink:href="/img/sprites/symbol/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <h3 class="modal__title">Подобрать автостекло</h3>
+        <form class="modal__form">
+          <input class="textfield" type="text" placeholder="Марка машины">
+          <input class="textfield" type="text" placeholder="Номер телефона">
+          <div class="modal__form-btn">
+            <button class="btn"><span class="btn__content">Оставить заявку</span><span class="btn__icon">
+                <svg>
+                  <use xlink:href="/img/sprites/symbol/sprite.svg#chevron-right"></use>
+                </svg></span></button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

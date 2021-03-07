@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>Contacts</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"><!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
+  </head>
+  <body class="wrapper" id="js-gallery">
+    <main class="wrapper__main">
+      <div class="menu">
+        <div class="menu__backdrop js-close-menu"></div>
+        <div class="menu__content">
+          <div class="menu__content-inner">
+            <div class="menu__head">
+              <div class="searchform menu__search">
+                <input class="textfield searchform__field" type="text" placeholder="Поиск">
+                <button class="searchform__submit">
+                  <svg>
+                    <use xlink:href="/img/sprites/symbol/sprite.svg#search"></use>
+                  </svg>
+                </button>
+              </div>
+              <button class="menu__close js-close-menu">
+                <svg>
+                  <use xlink:href="/img/sprites/symbol/sprite.svg#close"></use>
+                </svg>
+              </button>
+            </div>
+            <ul class="menu__nav"> 
+              <li class="has-submenu"><a href="#"><span><span>Каталог автостёкол</span>
+                    <svg>
+                      <use xlink:href="/img/sprites/symbol/sprite.svg#chevron-right"></use>
+                    </svg></span></a>
+                <ul> 
+                  <li>
+                    <button class="back"><span>
+                        <svg>
+                          <use xlink:href="/img/sprites/symbol/sprite.svg#chevron-left"></use>
+                        </svg><span>Назад</span></span></button>
+                  </li>
+                  <li><a href="#">Для легковых автомобилей</a></li>
+                  <li><a href="#">Для грузовых автомобилей</a></li>
+                  <li><a href="#">Для спецтехники</a></li>
+                  <li><a href="#">Микроавтобусы</a></li>
+                </ul>
+              </li>
+              <li class="has-submenu"><a href="#"><span><span>Услуги</span>
+                    <svg>
+                      <use xlink:href="/img/sprites/symbol/sprite.svg#chevron-right"></use>
+                    </svg></span></a>
+                <ul>
+                  <li>
+                    <button class="back"><span>
+                        <svg>
+                          <use xlink:href="/img/sprites/symbol/sprite.svg#chevron-left"></use>
+                        </svg><span>Назад</span></span></button>
+                  </li>
+                  <li><a href="#">Замена автостекол</a></li>
+                  <li><a href="#">Ремонт сколов и трещин</a></li>
+                  <li><a href="#">Тонировка автостекол</a></li>
+                  <li><a href="#">Бронирование кузова</a></li>
+                  <li><a href="#">Полировка стёкол и фар</a></li>
+                  <li><a href="#">Антидождь</a></li>
+                </ul>
+              </li>
+              <li><a href="#"><span>Оплата и гарантия </span></a></li>
+              <li><a href="#"><span>Наши работы</span></a></li>
+              <li><a href="#"><span>Контакты</span></a></li>
+            </ul>
+            <div class="menu__footer"> 
+              <div class="header-contacts">
+                <div class="header-contacts__socials"><a href="#">
+                    <svg>
+                      <use xlink:href="/img/sprites/symbol/sprite.svg#vk"></use>
+                    </svg></a><a href="#">
+                    <svg>
+                      <use xlink:href="/img/sprites/symbol/sprite.svg#instagramm"></use>
+                    </svg></a><a href="#">
+                    <svg>
+                      <use xlink:href="/img/sprites/symbol/sprite.svg#watsapp"></use>
+                    </svg></a></div>
+                <div class="header-contacts__phone"><a href="#">
+                    <svg>
+                      <use xlink:href="/img/sprites/symbol/sprite.svg#call-phone"></use>
+                    </svg><span>+7 (495) 920-80-77</span></a></div>
+                <div class="header-contacts__info"><span><strong>Пн-Пт:</strong> 9.00-19.00</span><span><strong>Сб:</strong> 9.00-17.00</span><span><strong>Вс:</strong> выходной</span></div>
+                <div class="header-contacts__callback">
+                  <button class="btn btn-accent js-open-modal" data-modal="#modal-callback"><span class="btn__content">Заказать звонок</span><span class="btn__icon">
+                      <svg>
+                        <use xlink:href="/img/sprites/symbol/sprite.svg#call-phone"></use>
+                      </svg></span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <header class="header">
+        <div class="container header__container">
+          <div class="header__top"> 
+            <button class="header__menu-btn js-open-menu"><span></span></button><a class="header__logo" href="#"><img src="img/icons/logo.svg"></a>
+            <div class="header__address">
+              Продажа и замена автостёкол,<br>
+              тонировка, антидождь, бронирование кузова<br>
+              г. Пушкино, ул. Учинская д.6
+            </div>
+            <form class="header__search">
+              <div class="searchform">
+                <input class="textfield searchform__field" type="text" placeholder="Поиск">
+                <button class="searchform__submit">
+                  <svg>
+                    <use xlink:href="/img/sprites/symbol/sprite.svg#search"></use>
+                  </svg>
+                </button>
+              </div>
+            </form>
+            <div class="header-contacts header-contacts--md-compact">
+              <div class="header-contacts__socials"><a href="#">
+                  <svg>
+                    <use xlink:href="/img/sprites/symbol/sprite.svg#vk"></use>
+                  </svg></a><a href="#">
+                  <svg>
+                    <use xlink:href="/img/sprites/symbol/sprite.svg#instagramm"></use>
+                  </svg></a><a href="#">
+                  <svg>
+                    <use xlink:href="/img/sprites/symbol/sprite.svg#watsapp"></use>
+                  </svg></a></div>
+              <div class="header-contacts__phone"><a href="#">
+                  <svg>
+                    <use xlink:href="/img/sprites/symbol/sprite.svg#call-phone"></use>
+                  </svg><span>+7 (495) 920-80-77</span></a></div>
+              <div class="header-contacts__info"><span><strong>Пн-Пт:</strong> 9.00-19.00</span><span><strong>Сб:</strong> 9.00-17.00</span><span><strong>Вс:</strong> выходной</span></div>
+              <div class="header-contacts__callback">
+                <button class="btn btn-accent js-open-modal" data-modal="#modal-callback"><span class="btn__content">Заказать звонок</span><span class="btn__icon">
+                    <svg>
+                      <use xlink:href="/img/sprites/symbol/sprite.svg#call-phone"></use>
+                    </svg></span></button>
+              </div>
+            </div>
+          </div>
+          <nav>
+            <ul class="header__menu"> 
+              <li class="has-submenu"><a href="#"><span>Каталог автостёкол
+                    <svg>
+                      <use xlink:href="/img/sprites/symbol/sprite.svg#chevron-bottom"></use>
+                    </svg></span></a>
+                <ul> 
+                  <li><a href="#">Для легковых автомобилей</a></li>
+                  <li><a href="#">Для грузовых автомобилей</a></li>
+                  <li><a href="#">Для спецтехники</a></li>
+                  <li><a href="#">Микроавтобусы</a></li>
+                </ul>
+              </li>
+              <li class="has-submenu">   <a href="#"><span>Услуги
+                    <svg>
+                      <use xlink:href="/img/sprites/symbol/sprite.svg#chevron-bottom"></use>
+                    </svg></span></a>
+                <ul>
+                  <li><a href="#">Замена автостекол</a></li>
+                  <li><a href="#">Ремонт сколов и трещин</a></li>
+                  <li><a href="#">Тонировка автостекол</a></li>
+                  <li><a href="#">Бронирование кузова</a></li>
+                  <li><a href="#">Полировка стёкол и фар</a></li>
+                  <li><a href="#">Антидождь</a></li>
+                </ul>
+              </li>
+              <li><a href="#"><span>Оплата и гарантия </span></a></li>
+              <li><a href="#"><span>Наши работы</span></a></li>
+              <li><a href="#"><span>Контакты</span></a></li>
+              <li><a class="header__cart" href="#">
+                  <svg>
+                    <use xlink:href="/img/sprites/symbol/sprite.svg#cart"></use>
+                  </svg><span>2    </span></a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <section class="breadcrumbs"> 
+        <div class="container"> 
+          <ul class="breadcrumbs__list">
+            <li><a href="#">
+                <svg>
+                  <use xlink:href="/img/sprites/symbol/sprite.svg#home"></use>
+                </svg><span>Главная</span></a></li>
+            <li><a href="#">Услуги</a></li>
+            <li>Замена автостёкол в городе Пушкино</li>
+          </ul>
+        </div>
+      </section>
+      <section class="z-2">
+        <div class="container"> 
+          <div class="page-title">
+            <h2>Контакты</h2>
+          </div>
+          <div class="contacts">
+            <div class="contacts__left">
+              <div class="contacts__title">ASVP GLASS</div>
+              <div class="contacts__item">
+                <svg>
+                  <use xlink:href="/img/sprites/symbol/sprite.svg#call-phone"></use>
+                </svg>
+                <div> 
+                  <div><a href="#">+7 (495) 920-80-77</a></div>
+                  <div><a href="#">+7 (495) 920-80-77</a></div>
+                </div>
+              </div>
+              <div class="contacts__item">
+                <svg>
+                  <use xlink:href="/img/sprites/symbol/sprite.svg#location"></use>
+                </svg>
+                <div> 
+                  <div>г. Пушкино, ул. Учинская д.6</div>
+                  <div><a class="accent" href="#">Построить маршрут в Яндекс Навигаторе</a></div>
+                </div>
+              </div>
+              <div class="contacts__item">
+                <svg>
+                  <use xlink:href="/img/sprites/symbol/sprite.svg#mail"></use>
+                </svg><a href="#">asvpglass@gmail.com</a>
+              </div>
+              <div class="contacts__socials"><a href="#">
+                  <svg>
+                    <use xlink:href="/img/sprites/symbol/sprite.svg#vk"></use>
+                  </svg></a><a href="#">
+                  <svg>
+                    <use xlink:href="/img/sprites/symbol/sprite.svg#instagramm"></use>
+                  </svg></a><a href="#">
+                  <svg>
+                    <use xlink:href="/img/sprites/symbol/sprite.svg#watsapp"></use>
+                  </svg></a></div>
+            </div>
+            <div class="contacts__right">
+              <p>Индивидуальный предприниматель Баранов Игорь Вячеславович</p>
+              <p>ОГРНИП 314503802900040</p>
+              <p>ИНН 503808060360</p>
+              <p>Банк МОСКОВСКИЙ ФИЛИАЛ АО КБ "МОДУЛЬБАНК"</p>
+              <p>БИК 044525092</p>
+              <p>К/c 30101810645250000092</p>
+              <p>Счет 40802810970010011119</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="contacts-map">
+           <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa8493ae755e9d6f23f2188f45406e1a088942cd4b2a74ea385a36e862fd7cf25&amp;source=constructor" width="100%" height="500" frameborder="0"></iframe>    </div>
+      <section class="padding-lg">
+        <div class="photo-slider-wrapper">
+          <div class="container photo-slider-wrapper__container">
+            <div class="section-head text-center">
+              <h2>Фото сервиса</h2>
+            </div>
+            <div class="photo-slider js-photo-slider">
+              <div class="photo-slider__slide"><a class="photo-slider__thumb" style="background-image: url(img/catalog-tile-2.jpg)" href="img/catalog-tile-2.jpg" data-fancybox="img" data-caption="&lt;h3&gt;Обратите внимание на наши дополнительные услуги.&lt;/h3&gt;&lt;p&gt;Мы рады предложит а так же бронирование антигравийной плёнкой, ремонт сколов и трещин, «антидождь».&lt;/p&gt;"></a></div>
+              <div class="photo-slider__slide"><a class="photo-slider__thumb" style="background-image: url(img/catalog-tile-2.jpg)" href="img/catalog-tile-2.jpg" data-fancybox="img" data-caption="&lt;h3&gt;Обратите внимание на наши дополнительные услуги.&lt;/h3&gt;&lt;p&gt;Мы рады предложить вам качественную тонировку автостёкол разных видов, а так же бронирование антигравийной плёнкой, ремонт сколов и трещин, «антидождь».&lt;/p&gt;"></a></div>
+              <div class="photo-slider__slide"><a class="photo-slider__thumb" style="background-image: url(img/catalog-tile-2.jpg)" href="img/catalog-tile-2.jpg" data-fancybox="img" data-caption="&lt;h3&gt;Обратите внимание на наши дополнительные услуги.&lt;/h3&gt;&lt;p&gt;Мы рады предложить вам качественную тонировку автостёкол разных видов, а так же бронирование антигравийной плёнкой, ремонт сколов и трещин, «антидождь».&lt;/p&gt;"></a></div>
+              <div class="photo-slider__slide"><a class="photo-slider__thumb" style="background-image: url(img/catalog-tile-2.jpg)" href="img/catalog-tile-2.jpg" data-fancybox="img" data-caption="&lt;h3&gt;Обратите внимание на наши дополнительные услуги.&lt;/h3&gt;&lt;p&gt;Мы рады предложить вам качественную тонировку автостёкол разных видов, а так же бронирование антигравийной плёнкой, ремонт сколов и трещин, «антидождь».&lt;/p&gt;"></a></div>
+              <div class="photo-slider__slide"><a class="photo-slider__thumb" style="background-image: url(img/catalog-tile-2.jpg)" href="img/catalog-tile-2.jpg" data-fancybox="img" data-caption="&lt;h3&gt;Обратите внимание на наши дополнительные услуги.&lt;/h3&gt;&lt;p&gt;Мы рады предложить вам качественную тонировку автостёкол разных видов, а так же бронирование антигравийной плёнкой, ремонт сколов и трещин, «антидождь».&lt;/p&gt;"></a></div>
+              <div class="photo-slider__slide"><a class="photo-slider__thumb" style="background-image: url(img/catalog-tile-2.jpg)" href="img/catalog-tile-2.jpg" data-fancybox="img" data-caption="&lt;h3&gt;Обратите внимание на наши дополнительные услуги.&lt;/h3&gt;&lt;p&gt;Мы рады предложить вам качественную тонировку автостёкол разных видов, а так же бронирование антигравийной плёнкой, ремонт сколов и трещин, «антидождь».&lt;/p&gt;"></a></div>
+              <div class="photo-slider__slide"><a class="photo-slider__thumb" style="background-image: url(img/catalog-tile-2.jpg)" href="img/catalog-tile-2.jpg" data-fancybox="img" data-caption="&lt;h3&gt;Обратите внимание на наши дополнительные услуги.&lt;/h3&gt;&lt;p&gt;Мы рады предложить вам качественную тонировку автостёкол разных видов, а так же бронирование антигравийной плёнкой, ремонт сколов и трещин, «антидождь».&lt;/p&gt;"></a></div>
+              <div class="photo-slider__slide"><a class="photo-slider__thumb" style="background-image: url(img/catalog-tile-2.jpg)" href="img/catalog-tile-2.jpg" data-fancybox="img" data-caption="&lt;h3&gt;Обратите внимание на наши дополнительные услуги.&lt;/h3&gt;&lt;p&gt;Мы рады предложить вам качественную тонировку автостёкол разных видов, а так же бронирование антигравийной плёнкой, ремонт сколов и трещин, «антидождь».&lt;/p&gt;"></a></div>
+              <div class="photo-slider__slide"><a class="photo-slider__thumb" style="background-image: url(img/catalog-tile-2.jpg)" href="img/catalog-tile-2.jpg" data-fancybox="img" data-caption="&lt;h3&gt;Обратите внимание на наши дополнительные услуги.&lt;/h3&gt;&lt;p&gt;Мы рады предложить вам качественную тонировку автостёкол разных видов, а так же бронирование антигравийной плёнкой, ремонт сколов и трещин, «антидождь».&lt;/p&gt;"></a></div>
+              <div class="photo-slider__slide"><a class="photo-slider__thumb" style="background-image: url(img/catalog-tile-2.jpg)" href="img/catalog-tile-2.jpg" data-fancybox="img" data-caption="&lt;h3&gt;Обратите внимание на наши дополнительные услуги.&lt;/h3&gt;&lt;p&gt;Мы рады предложить вам качественную тонировку автостёкол разных видов, а так же бронирование антигравийной плёнкой, ремонт сколов и трещин, «антидождь».&lt;/p&gt;"></a></div>
+              <div class="photo-slider__slide"><a class="photo-slider__thumb" style="background-image: url(img/catalog-tile-2.jpg)" href="img/catalog-tile-2.jpg" data-fancybox="img" data-caption="&lt;h3&gt;Обратите внимание на наши дополнительные услуги.&lt;/h3&gt;&lt;p&gt;Мы рады предложить вам качественную тонировку автостёкол разных видов, а так же бронирование антигравийной плёнкой, ремонт сколов и трещин, «антидождь».&lt;/p&gt;"></a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer bg-dark bg-left">
+      <div class="container">
+        <div class="footer__grid"> 
+          <div class="footer__contacts"> 
+            <h3 class="footer__title">SVP GLASS</h3><a class="footer__contact" href="#">
+              <svg>
+                <use xlink:href="/img/sprites/symbol/sprite.svg#call-phone"></use>
+              </svg><span>+7 (495) 920-80-77</span></a>
+            <div class="footer__contact" href="#">
+              <svg>
+                <use xlink:href="/img/sprites/symbol/sprite.svg#location"></use>
+              </svg><span>г. Пушкино, ул. Учинская д.6</span>
+            </div><a class="footer__contact" href="#">
+              <svg>
+                <use xlink:href="/img/sprites/symbol/sprite.svg#mail"></use>
+              </svg><span>asvpglass@gmail.com</span></a>
+            <div class="footer__socials"><a href="#">
+                <svg>
+                  <use xlink:href="/img/sprites/symbol/sprite.svg#vk"></use>
+                </svg></a><a href="#">
+                <svg>
+                  <use xlink:href="/img/sprites/symbol/sprite.svg#instagramm"></use>
+                </svg></a><a href="#">
+                <svg>
+                  <use xlink:href="/img/sprites/symbol/sprite.svg#watsapp"></use>
+                </svg></a></div>
+          </div>
+          <div class="footer__menu">
+            <div class="footer__menu-cols">
+              <div class="footer__menu-col">
+                <div class="footer__menu-title">Разделы</div>
+                <ul> 
+                  <li><a href="#">Оплата и гарантия</a></li>
+                  <li><a href="#">Наши работы</a></li>
+                  <li><a href="#">Контакты</a></li>
+                </ul>
+              </div>
+              <div class="footer__col-divider">   </div>
+              <div class="footer__menu-col"> 
+                <div class="footer__menu-title">Каталог автостёкол</div>
+                <ul> 
+                  <li><a href="#">Для легковых автомобилей</a></li>
+                  <li><a href="#">Для грузовых автомобилей</a></li>
+                  <li><a href="#">Для спецтехники</a></li>
+                  <li><a href="#">Микроавтобусы</a></li>
+                </ul><a class="footer__menu-btm-link d-none-md" href="#">Политика конфиденциалньости</a>
+              </div>
+              <div class="footer__col-divider">     </div>
+              <div class="footer__menu-col"> 
+                <div class="footer__menu-title">Услуги</div>
+                <ul> 
+                  <li><a href="#">Замена автостекол</a></li>
+                  <li><a href="#">Ремонт сколов и трещин</a></li>
+                  <li><a href="#">Тонировка автостекол</a></li>
+                  <li><a href="#">Бронирование кузова</a></li>
+                  <li><a href="#">Полировка стёкол и фар</a></li>
+                  <li><a href="#">Антидождь</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer__info"> 
+            <div>
+              © «SVP» 2013—2020. Все права защищены<br>
+              ИП Баранов Игорь Вячеславович
+            </div>
+            <div class="d-none d-block-md"><a href="#">Политика конфиденциалньости</a></div>
+            <div>Любое использование материалов с сайта запрещено без письменного разрешения администрации сайта. Указанные на сайте цены не являются публичной офертой могут быть изменены в любое время.</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal" id="modal-callback">
+      <div class="modal__backdrop js-close-modal"></div>
+      <div class="modal__content">
+        <button class="modal__close js-close-modal">
+          <svg>
+            <use xlink:href="/img/sprites/symbol/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <h3 class="modal__title">Заказать обратный звонок</h3>
+        <form class="modal__form">
+          <input class="textfield" type="text" placeholder="Ваше имя">
+          <input class="textfield" type="text" placeholder="Номер телефона">
+          <div class="modal__form-btn">
+            <button class="btn"><span class="btn__content">Заказать звонок</span><span class="btn__icon">
+                <svg>
+                  <use xlink:href="/img/sprites/symbol/sprite.svg#chevron-right"></use>
+                </svg></span></button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal" id="modal-fast-order">
+      <div class="modal__backdrop js-close-modal"></div>
+      <div class="modal__content">
+        <button class="modal__close js-close-modal">
+          <svg>
+            <use xlink:href="/img/sprites/symbol/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <h3 class="modal__title">Быстрый заказ</h3>
+        <form class="modal__form">
+          <input class="textfield" type="text" placeholder="ФИО">
+          <input class="textfield" type="text" placeholder="Номер телефона">
+          <div class="modal__form-btn">
+            <button class="btn"><span class="btn__content">Быстрый заказ</span><span class="btn__icon">
+                <svg>
+                  <use xlink:href="/img/sprites/symbol/sprite.svg#chevron-right"></use>
+                </svg></span></button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal" id="modal-help">
+      <div class="modal__backdrop js-close-modal"></div>
+      <div class="modal__content">
+        <button class="modal__close js-close-modal">
+          <svg>
+            <use xlink:href="/img/sprites/symbol/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <h3 class="modal__title">Подобрать автостекло</h3>
+        <form class="modal__form">
+          <input class="textfield" type="text" placeholder="Марка машины">
+          <input class="textfield" type="text" placeholder="Номер телефона">
+          <div class="modal__form-btn">
+            <button class="btn"><span class="btn__content">Оставить заявку</span><span class="btn__icon">
+                <svg>
+                  <use xlink:href="/img/sprites/symbol/sprite.svg#chevron-right"></use>
+                </svg></span></button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
