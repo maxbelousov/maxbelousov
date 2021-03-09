@@ -8,8 +8,8 @@ var prevArrow2 = '<svg><use xlink:href="/img/sprites/symbol/sprite.svg#left-arro
 
 function drags(dragElement, resizeElement, container) {
   dragElement.on("mousedown vmousedown", function (e) {
-    dragElement.addClass('draggable');
-    resizeElement.addClass('resizable');
+    dragElement.addClass('ba-draggable');
+    resizeElement.addClass('ba-resizable');
     var dragWidth = dragElement.outerWidth(),
         xPosition = dragElement.offset().left + dragWidth - e.pageX,
         containerOffset = container.offset().left,
@@ -26,20 +26,19 @@ function drags(dragElement, resizeElement, container) {
       }
 
       var widthValue = (leftValue + dragWidth / 2 - containerOffset) * 100 / containerWidth + '%';
-      $('.draggable').css('left', widthValue).on("mouseup vmouseup", function () {
-        $(this).removeClass('draggable');
-        resizeElement.removeClass('resizable');
+      $('.ba-draggable').css('left', widthValue).on("mouseup vmouseup", function () {
+        $(this).removeClass('ba-draggable');
+        resizeElement.removeClass('ba-resizable');
       });
-      $('.resizable').css('width', widthValue); //function to upadate images label visibility here
-      // ...
+      $('.ba-resizable').css('width', widthValue);
     }).on("mouseup vmouseup", function (e) {
-      dragElement.removeClass('draggable');
-      resizeElement.removeClass('resizable');
+      dragElement.removeClass('ba-draggable');
+      resizeElement.removeClass('ba-resizable');
     });
     e.preventDefault();
   }).on("mouseup vmouseup", function (e) {
-    dragElement.removeClass('draggable');
-    resizeElement.removeClass('resizable');
+    dragElement.removeClass('ba-draggable');
+    resizeElement.removeClass('ba-resizable');
   });
 }
 
@@ -48,6 +47,24 @@ function setCompareImagesWidth() {
     var w = $(v).width();
     $(v).find('.cd-resize-img__bg').width(w);
   });
+}
+
+function showNotification(text, type) {
+  var color = 'linear-gradient(45deg, #92cf47, #56ab2f)';
+
+  if (type === 'danger') {
+    color = 'linear-gradient(45deg, #e52d27, #b31217)';
+  }
+
+  Toastify({
+    text: text,
+    duration: 3000,
+    //close: true,
+    gravity: "top",
+    position: "center",
+    backgroundColor: color,
+    stopOnFocus: true
+  }).showToast();
 }
 
 $(function () {
@@ -116,10 +133,6 @@ $(function () {
       breakpoint: 767,
       settings: "unslick"
     }]
-  });
-  $('.header__menu .has-submenu > a').click(function (e) {
-    e.preventDefault();
-    $(this).parent().toggleClass('is-active').siblings().removeClass('is-active');
   }); //mobile menu
 
   $('.menu__nav  .has-submenu > a').click(function (e) {
@@ -181,10 +194,6 @@ $(function () {
     e.preventDefault();
     $('.filters').removeClass('is-active');
   });
-  $('.extra-services__toggle').click(function (e) {
-    e.preventDefault();
-    $(this).closest('.extra-services').toggleClass('is-active');
-  });
   $('.page-search__input').focus(function (e) {
     e.preventDefault();
     $(this).closest('.page-search').addClass('is-active');
@@ -239,6 +248,22 @@ $(function () {
     }
 
     input.val(val < 0 ? 0 : val);
+  });
+  $('.js-remove-from-cart').click(function (e) {
+    e.preventDefault();
+    $(this).closest('.cart-item').remove();
+    showNotification('Товар удален из корзины!', 'danger');
+  });
+  $('.js-add-to-cart').click(function (e) {
+    e.preventDefault();
+    if ($(this).hasClass('in-cart')) return;
+    $(this).addClass('in-cart');
+
+    if ($(this).find('.btn__content').length) {
+      $(this).find('.btn__content').html('В корзине!');
+    }
+
+    showNotification('Товар добавлен в корзину!');
   });
 });
 //# sourceMappingURL=main.js.map
