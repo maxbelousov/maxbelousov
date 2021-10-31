@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>Article</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"><!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
+  </head>
+  <body class="wrapper" id="js-gallery">
+    <main class="wrapper__main">
+      <header class="header">
+        <div class="container header__container">
+          <div class="header__menu-btn-wrap">
+            <button class="js-toggle-mobile-menu header__menu-btn"><span></span></button>
+          </div>
+          <div class="header__logo"><a href="#"><img src="img/logo.svg" alt="Dolmen"></a></div>
+          <div class="header__right"> 
+            <nav class="menu header__menu">
+              <ul>
+                <li class="is-active"><a href="#">Products</a></li>
+                <li><a href="#">Platform</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Training</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </nav>
+            <div class="lang header__lang"><a href="#" tabindex="-1"><span><span class="lang_wrapper"><span class="active">RU</span><span>EN</span></span></span></a></div>
+          </div>
+        </div>
+      </header>
+      <div class="mobile-menu">
+        <div class="mobile-menu__inner">
+          <div class="container">
+            <nav class="menu mobile-menu__menu">
+              <ul>
+                <li class="is-active"><a href="#">Products</a></li>
+                <li><a href="#">Platform</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Training</a></li>
+                <li><a href="#">Contact</a></li>
+                <li>
+                  <div class="lang"><a href="#"><span><span class="lang_wrapper"><span class="active">RU</span><span>EN</span></span></span></a></div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="page-head">
+        <div class="container">
+          <h1 class="h1">Article template</h1>
+          <ul class="breadcrumbs">
+            <li><a href="#">
+                <svg>
+                  <use xlink:href="/img/sprites/symbol/sprite.svg#home"></use>
+                </svg><span>Home</span></a></li>
+            <li><a href="#">Training  </a></li>
+            <li>Article template</li>
+          </ul>
+        </div>
+      </div>
+      <section class="major-section">
+        <div class="container">
+          <div class="major-section__container major-section__container--no-img">
+            <div class="text-limiter">
+              <h2 class="h2 title-with-dash major-section__title">We develop high-tech business automation platform and solutions    </h2>
+              <p>Our team includes software developers, implementation and support engineers with multiple years’ experience with world-class software solutions</p>
+              <p>Unique expertise in building and operating enterprise-level back- and front-office systems of various technology classes: Transaction Processing System (TPS), Business Intelligence (BI), Enterprise Resource Planning (ERP), etc.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="article text-section">
+        <div class="container">
+          <h2 class="h2 title-with-dash">Development notes</h2>
+          <div class="article__notes">
+            <div class="note">
+              <h4 class="h4 note__title">Dolmen tables are objects and may contain other objects as hierarchical data</h4>
+            </div>
+            <div class="note">
+              <h4 class="h4 note__title">Dolmen system has almost schema-less database structure and almost zero impact on database schema changes</h4>
+            </div>
+            <div class="note">
+              <h4 class="h4 note__title">Table may be “abstract" - not stored in Dolmen database but created on the fly. For example, the following may be included in the table data</h4>
+              <div class="note__text">
+                <p>Data from external sources and services Combined data from local or/and external sources Any specific data as files and so on</p>
+              </div>
+            </div>
+            <div class="note">
+              <h4 class="h4 note__title">We have already predefined Dolmen interfaces to some external sources (for example SAP, 1C etc), where in the table description you just point to corresponding external object and Dolmen system creates all integration automatically</h4>
+            </div>
+          </div>
+          <div class="article__section">
+            <h3 class="h3">Web interface for each module</h3>
+            <p>Web interface for each module consists of a <a href="#">number of screens</a>. Every screen is a set of Parts, where Part is a widget - table, form, graph, tab control, tree control, picture gallery, rich text editor, etc. Parts layout <span class="gray">based on screen</span> grid is defined in the screen.</p>
+            <p>Each Part has to be referenced to a data source, where data source is a set of data obtained from Dolmen server. Usually data source is a table having been defined previously, though, sometimes it may be an API function, e.g. for graph Parts. Several Parts my be linked to one data source and show the same data differently    </p>
+            <div class="article__lists">
+              <ul class="styled-ul">
+                <li>
+                   Buttons in the Ul  
+                  <ul>
+                    <li>External communications
+                      <ul>
+                        <li>Abstract tables</li>
+                        <li>External communications</li>
+                      </ul>
+                    </li>
+                    <li>Abstract tables</li>
+                  </ul>
+                </li>
+                <li>External communications</li>
+                <li>Abstract tables</li>
+                <li>Other needs</li>
+              </ul>
+              <ol class="styled-ol">
+                <li>
+                  <div class="num">1</div>
+                  <div>
+                     Buttons in the Ul  
+                    <ol>
+                      <li> 
+                        <div class="num">1.1</div>
+                        <div>
+                           External communications
+                          <ol>
+                            <li>
+                              <div class="num">1.1.1</div>
+                              <div>Abstract tables  </div>
+                            </li>
+                            <li>
+                              <div class="num">1.1.2</div>
+                              <div>External communications</div>
+                            </li>
+                          </ol>
+                        </div>
+                      </li>
+                      <li> 
+                        <div class="num">1.2</div>
+                        <div>Abstract tables     </div>
+                      </li>
+                    </ol>
+                  </div>
+                </li>
+                <li> 
+                  <div class="num">2</div>
+                  <div>External communications</div>
+                </li>
+                <li>
+                  <div class="num">3</div>
+                  <div>Abstract tables        </div>
+                </li>
+                <li>
+                  <div class="num">4</div>
+                  <div>Other needs          </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="article__section"> 
+            <div class="article__columns">
+              <div>
+                <p>Web interface for each module consists of a number of screens. Every screen is a set of Parts, where Part is a widget - table, form, graph, tab control, tree control, picture gallery, rich text editor, etc. Parts layout based on screen grid is defined in the screen.</p>
+                <p>Each Part has to be referenced to a data source, where data source is a set of data obtained from Dolmen server. Usually data source/       </p>
+              </div>
+              <div> <a class="preview" data-fancybox="gallery" href="img/s1.jpg" data-caption="&lt;h3&gt;S1&lt;/h3&gt;&lt;p&gt;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident odio vel ipsam consequuntur vero animi obcaecati&lt;/p&gt;"><img src="img/s1.jpg"><span>
+                    <svg>
+                      <use xlink:href="/img/sprites/symbol/sprite.svg#link"></use>
+                    </svg></span></a></div>
+            </div>
+          </div>
+          <div class="article__section"> 
+            <div class="article__columns article__columns--rtl">
+              <div>
+                <p>Web interface for each module consists of a number of screens. Every screen is a set of Parts, where Part is a widget - table, form, graph, tab control, tree control, picture gallery, rich text editor, etc. Parts layout based on screen grid is defined in the screen.</p>
+                <p>Each Part has to be referenced to a data source, where data source is a set of data obtained from Dolmen server. Usually data source/       </p>
+              </div>
+              <div><a class="video-thumb video-thumb--lg" data-fancybox="gallery" href="https://www.youtube.com/watch?v=meBbDqAXago" style="background-image: url(img/s1.jpg)"> </a></div>
+            </div>
+          </div>
+          <div class="article__section">
+            <div class="thumbs-slider-wrapper">
+              <div class="thumbs-slider">
+                <div class="thumbs-slider__slide"><a class="screen-thumb" data-fancybox="gallery" href="img/s1.jpg" data-caption="&lt;h3&gt;S1&lt;/h3&gt;&lt;p&gt;Slide 1&lt;/p&gt;" style="background-image: url(img/s1.jpg)"><span>
+                      <svg>
+                        <use xlink:href="/img/sprites/symbol/sprite.svg#search"></use>
+                      </svg></span></a></div>
+                <div class="thumbs-slider__slide"><a class="screen-thumb" data-fancybox="gallery" href="img/s1.jpg" data-caption="&lt;h3&gt;S2&lt;/h3&gt;&lt;p&gt;Slide 2&lt;/p&gt;" style="background-image: url(img/s1.jpg)"><span>
+                      <svg>
+                        <use xlink:href="/img/sprites/symbol/sprite.svg#search"></use>
+                      </svg></span></a></div>
+                <div class="thumbs-slider__slide"><a class="screen-thumb" data-fancybox="gallery" href="img/s1.jpg" data-caption="&lt;h3&gt;S3&lt;/h3&gt;&lt;p&gt;Slide 3&lt;/p&gt;" style="background-image: url(img/s1.jpg)"><span>
+                      <svg>
+                        <use xlink:href="/img/sprites/symbol/sprite.svg#search"></use>
+                      </svg></span></a></div>
+                <div class="thumbs-slider__slide"><a class="screen-thumb" data-fancybox="gallery" href="img/s1.jpg" data-caption="&lt;h3&gt;S4&lt;/h3&gt;&lt;p&gt;Slide 4&lt;/p&gt;" style="background-image: url(img/s1.jpg)"><span>
+                      <svg>
+                        <use xlink:href="/img/sprites/symbol/sprite.svg#search"></use>
+                      </svg></span></a></div>
+                <div class="thumbs-slider__slide"><a class="screen-thumb" data-fancybox="gallery" href="img/s1.jpg" data-caption="&lt;h3&gt;S5&lt;/h3&gt;&lt;p&gt;Slide 5&lt;/p&gt;" style="background-image: url(img/s1.jpg)"><span>
+                      <svg>
+                        <use xlink:href="/img/sprites/symbol/sprite.svg#search"></use>
+                      </svg></span></a></div>
+                <div class="thumbs-slider__slide"><a class="screen-thumb" data-fancybox="gallery" href="img/s1.jpg" data-caption="&lt;h3&gt;S6&lt;/h3&gt;&lt;p&gt;Slide 6&lt;/p&gt;" style="background-image: url(img/s1.jpg)"><span>
+                      <svg>
+                        <use xlink:href="/img/sprites/symbol/sprite.svg#search"></use>
+                      </svg></span></a></div>
+              </div>
+              <div class="thumbs-slider-counter"><span>1</span> / 6</div>
+            </div>
+          </div>
+          <div class="article__section"> 
+            <div class="article__columns article__columns--with-lg-right">
+              <div>
+                <p>Web interface for each module consists of a <a href="#">number of screens</a>. Every screen is a set of Parts, where Part is a widget - table, form, graph, tab control, tree control, picture gallery, rich text editor, etc. Parts layout <span class="gray">based on screen</span> grid is defined in the screen.</p>
+                <p>Each Part has to be referenced to a data source, where data source is a set of data obtained from Dolmen server. Usually data source is a table having been defined previously, though, sometimes it may be an API function, e.g. for graph Parts. Several Parts my be linked to one data source and show the same data differently    </p>
+              </div>
+              <div><a class="preview" data-fancybox="gallery" href="img/s3.jpg" data-caption="&lt;h3&gt;S3&lt;/h3&gt;&lt;p&gt;Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident odio vel ipsam consequuntur vero animi obcaecati&lt;/p&gt;"><img src="img/s3.jpg"><span>
+                    <svg>
+                      <use xlink:href="/img/sprites/symbol/sprite.svg#link"></use>
+                    </svg></span></a>
+                <div class="preview-capture">Web interface </div>
+              </div>
+            </div>
+          </div>
+          <div class="article__section">
+            <div class="subscribe subscribe--one-row">
+              <h2 class="h2 subscribe__title">Subscribe for newsletter</h2>
+              <div class="subscribe__form">
+                <input class="textfield subscribe__field" type="text" placeholder="Enter e-mail">
+                <button class="btn subscribe__btn" type="submit"><span>Subscribe       </span></button>
+              </div>
+            </div>
+          </div>
+          <div class="article__section">
+            <p>Each Part has to be referenced to a data source, where data source is a set of data obtained from Dolmen server. Usually data source is a table having been defined previously, though, sometimes it may be an API function, e.g. for graph Parts. Several Parts my be linked to one data source and show the same data differently      </p>
+          </div>
+          <div class="article__section">
+            <div class="blockquote">
+              <div class="blockquote__content">
+                <p>Web interface for each module consists of a number of screens. Every screen is a set of Parts, where Part is a widget - table, form, graph, tab control, tree control, picture gallery, rich text editor, etc.   </p>
+              </div>
+            </div>
+          </div>
+          <div class="article__section">
+            <div class="table-wrap">
+              <table>
+                <tr> 
+                  <th>Products</th>
+                  <th>Interface      </th>
+                  <th>About      </th>
+                  <th class="hidden-tablet">Training      </th>
+                  <th class="hidden-tablet">Contact      </th>
+                </tr>
+                <tr> 
+                  <td>Products</td>
+                  <td>Interface      </td>
+                  <td>About      </td>
+                  <td class="hidden-tablet">Training      </td>
+                  <td class="hidden-tablet">Contact      </td>
+                </tr>
+                <tr> 
+                  <td>Products</td>
+                  <td>Interface      </td>
+                  <td>About      </td>
+                  <td class="hidden-tablet">Training      </td>
+                  <td class="hidden-tablet">Contact    </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="article__section">
+            <h3 class="h3">Web interface for each module</h3>
+            <p>Web interface for each module consists of a <a href="#">number of screens</a>. Every screen is a set of Parts, where Part is a widget - table, form, graph, tab control, tree control, picture gallery, rich text editor, etc. Parts layout <span class="gray">based on screen</span> grid is defined in the screen.</p>
+            <p>Each Part has to be referenced to a data source, where data source is a set of data obtained from Dolmen server. Usually data source is a table having been defined previously, though, sometimes it may be an API function, e.g. for graph Parts. Several Parts my be linked to one data source and show the same data differently              </p>
+          </div>
+          <div class="article__section">
+            <div class="files-grid"><a class="file-card" href="#">
+                <div class="file-card__icon pdf"></div>
+                <div class="file-card__text">
+                  <div class="file-card__name">Filename</div>
+                  <div class="file-card__date">12/04/2020  </div>
+                </div></a><a class="file-card" href="#">
+                <div class="file-card__icon xls"></div>
+                <div class="file-card__text">
+                  <div class="file-card__name">Filename</div>
+                  <div class="file-card__date">12/04/2020  </div>
+                </div></a><a class="file-card" href="#">
+                <div class="file-card__icon doc"></div>
+                <div class="file-card__text">
+                  <div class="file-card__name">Filename</div>
+                  <div class="file-card__date">12/04/2020  </div>
+                </div></a></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__logo"><a href="#"><img src="img/logo-gray.svg"></a></div>
+          <nav class="menu footer__menu">
+            <ul>
+              <li class="is-active"><a href="#">Products</a></li>
+              <li><a href="#">Platform</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Training</a></li>
+              <li><a href="#">Contact</a></li>
+              <li>
+                <div class="lang"><a href="#"><span><span class="lang_wrapper"><span class="active">RU</span><span>EN</span></span></span></a></div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__bottom">
+          <div class="foorer__copytights">© 2020 Dolmen. All rights reserved</div>
+          <div class="footer__mail"><a href="#">info@dolmen.com            </a></div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/vendor.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaf7K668drB7QOAmvPKV5b_58MJOz9mJI"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

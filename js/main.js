@@ -1,269 +1,266 @@
 "use strict";
 
 var $ = jQuery;
-var nextArrow = '<svg><use xlink:href="/img/sprites/symbol/sprite.svg#chevron-right"></use></svg>';
-var prevArrow = '<svg><use xlink:href="/img/sprites/symbol/sprite.svg#chevron-left"></use></svg>';
-var nextArrow2 = '<svg><use xlink:href="/img/sprites/symbol/sprite.svg#right-arrow"></use></svg>';
-var prevArrow2 = '<svg><use xlink:href="/img/sprites/symbol/sprite.svg#left-arrow"></use></svg>';
-
-function drags(dragElement, resizeElement, container) {
-  dragElement.on("mousedown vmousedown", function (e) {
-    dragElement.addClass('ba-draggable');
-    resizeElement.addClass('ba-resizable');
-    var dragWidth = dragElement.outerWidth(),
-        xPosition = dragElement.offset().left + dragWidth - e.pageX,
-        containerOffset = container.offset().left,
-        containerWidth = container.outerWidth(),
-        minLeft = containerOffset + 10,
-        maxLeft = containerOffset + containerWidth - dragWidth - 10;
-    dragElement.parents().on("mousemove vmousemove", function (e) {
-      var leftValue = e.pageX + xPosition - dragWidth; //constrain the draggable element to move inside its container
-
-      if (leftValue < minLeft) {
-        leftValue = minLeft;
-      } else if (leftValue > maxLeft) {
-        leftValue = maxLeft;
-      }
-
-      var widthValue = (leftValue + dragWidth / 2 - containerOffset) * 100 / containerWidth + '%';
-      $('.ba-draggable').css('left', widthValue).on("mouseup vmouseup", function () {
-        $(this).removeClass('ba-draggable');
-        resizeElement.removeClass('ba-resizable');
-      });
-      $('.ba-resizable').css('width', widthValue);
-    }).on("mouseup vmouseup", function (e) {
-      dragElement.removeClass('ba-draggable');
-      resizeElement.removeClass('ba-resizable');
-    });
-    e.preventDefault();
-  }).on("mouseup vmouseup", function (e) {
-    dragElement.removeClass('ba-draggable');
-    resizeElement.removeClass('ba-resizable');
-  });
-}
-
-function setCompareImagesWidth() {
-  $.each($('.cd-image-container'), function (k, v) {
-    var w = $(v).width();
-    $(v).find('.cd-resize-img__bg').width(w);
-  });
-}
-
-function showNotification(text, type) {
-  var color = 'linear-gradient(45deg, #92cf47, #56ab2f)';
-
-  if (type === 'danger') {
-    color = 'linear-gradient(45deg, #e52d27, #b31217)';
-  }
-
-  Toastify({
-    text: text,
-    duration: 3000,
-    //close: true,
-    gravity: "top",
-    position: "center",
-    backgroundColor: color,
-    stopOnFocus: true
-  }).showToast();
-}
-
+var nextArrow = '<svg><use xlink:href="/img/sprites/symbol/sprite.svg#right-arrow"></use></svg>';
+var prevArrow = '<svg><use xlink:href="/img/sprites/symbol/sprite.svg#left-arrow"></use></svg>';
 $(function () {
-  $('.cd-image-container').each(function () {
-    var actual = $(this);
-    drags(actual.find('.cd-handle'), actual.find('.cd-resize-img'), actual);
-  });
-  setCompareImagesWidth();
-  $(window).resize(setCompareImagesWidth);
-  tippy('.tippy', {
-    content: function content(reference) {
-      var id = reference.getAttribute('data-template');
-      console.log({
-        reference: reference
-      });
-      console.log({
-        id: id
-      });
-      var template = document.getElementById(id);
-      console.log({
-        template: template
-      });
-      return template.innerHTML;
-    },
-    allowHTML: true,
-    placement: 'bottom',
-    theme: 'light'
-  });
-  $('.js-tabs-nav a').click(function (e) {
-    e.preventDefault();
-
-    if ($(this).hasClass('is-active')) {
-      return;
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 20) {
+      $(".header").addClass("has-scroll");
+    } else {
+      $(".header").removeClass("has-scroll");
     }
-
-    $(this).addClass('is-active').siblings().removeClass('is-active');
-    $($(this).attr('href')).addClass('is-active').siblings().removeClass('is-active');
   });
-  $('.js-slider-1').slick({
+  $(".js-toggle-mobile-menu").click(function (e) {
+    e.preventDefault();
+    $("body").toggleClass("mobile-menu-active");
+  });
+  $(document).keyup(function (e) {
+    if (e.key === "Escape") {
+      $("body").removeClass("mobile-menu-active");
+    }
+  });
+  document.querySelectorAll("pre code").forEach(function (block) {
+    hljs.highlightBlock(block);
+  });
+  $(".code-card__content").mCustomScrollbar();
+  $('.thumbs-slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+    $('.thumbs-slider-counter span').html(nextSlide + 1);
+  });
+  $('.thumbs-slider').slick({
     arrows: true,
     dots: false,
-    slidesToShow: 1,
-    infinite: true,
-    prevArrow: '<button class="control-btn prev">' + prevArrow + '</button>',
-    nextArrow: '<button class="control-btn next">' + nextArrow + '</button>'
-  });
-  $('.js-banners-slider').slick({
-    arrows: false,
-    dots: true,
-    slidesToShow: 1
-  });
-  $('.js-photo-slider').slick({
-    arrows: true,
-    dots: false,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: 4,
     infinite: false,
-    prevArrow: '<button class="control-btn prev">' + prevArrow2 + '</button>',
-    nextArrow: '<button class="control-btn next">' + nextArrow2 + '</button>',
+    prevArrow: '<button class="control-btn prev">' + prevArrow + '</button>',
+    nextArrow: '<button class="control-btn next">' + nextArrow + '</button>',
     responsive: [{
       breakpoint: 1199,
       settings: {
-        arrows: false
+        slidesToShow: 2,
+        variableWidth: true
       }
     }, {
       breakpoint: 767,
-      settings: "unslick"
+      settings: {
+        slidesToShow: 1,
+        variableWidth: true
+      }
     }]
-  }); //mobile menu
-
-  $('.menu__nav  .has-submenu > a').click(function (e) {
-    e.preventDefault();
-    $(this).parent().addClass('is-active').siblings().removeClass('is-active');
-    $(this).closest('.menu__nav').addClass('submenu-active');
-  });
-  $('.menu__nav  .back').click(function (e) {
-    e.preventDefault();
-    $(this).closest('li').removeClass('is-active');
-    $(this).closest('.menu__nav').removeClass('submenu-active');
-  });
-  $('.js-close-menu').click(function (e) {
-    e.preventDefault();
-    $('.menu').removeClass('is-active');
-    $('body').removeClass('menu-active');
-  });
-  $('.js-open-menu').click(function (e) {
-    e.preventDefault();
-    $('.menu').addClass('is-active');
-    $('body').addClass('menu-active');
-  });
-  $('.table-3__head-toggle, .table-4__head-toggle').click(function (e) {
-    e.preventDefault();
-    var type = $(this).attr('data-type');
-    $("[data-type=\"".concat(type, "\"]")).toggleClass('is-active');
-  });
-  $('.select__toggle').click(function (e) {
-    e.preventDefault();
-    $(this).closest('.select').toggleClass('is-open');
-  });
-  $('.select__option').click(function (e) {
-    e.preventDefault();
-    var content = $(this).html();
-    $(this).closest('.select').removeClass('is-open');
-    $(this).closest('.select').find('.select__toggle').html(content);
-    $(this).addClass('is-active').siblings().removeClass('is-active');
-    console.log({
-      content: content
-    });
-  });
-  $(document).click(function (event) {
-    var $target = $(event.target);
-
-    if (!$target.closest('.select.is-open').length) {
-      $('.select.is-open').removeClass('is-open');
-    }
-
-    if (!$target.closest('.has-submenu.is-active').length) {
-      $('.has-submenu.is-active').removeClass('is-active');
-    }
-  });
-  $('.filters__group-items').mCustomScrollbar();
-  $('.js-open-filters').click(function (e) {
-    e.preventDefault();
-    $('.filters').addClass('is-active');
-  });
-  $('.js-close-filters').click(function (e) {
-    e.preventDefault();
-    $('.filters').removeClass('is-active');
-  });
-  $('.page-search__input').focus(function (e) {
-    e.preventDefault();
-    $(this).closest('.page-search').addClass('is-active');
-  });
-  $('.page-search__input').blur(function (e) {
-    e.preventDefault();
-    $(this).closest('.page-search').removeClass('is-active');
-  });
-  $('.js-close-modal').click(function (e) {
-    e.preventDefault();
-    $(this).closest('.modal').removeClass('is-active');
-  });
-  $('.js-open-modal').click(function (e) {
-    e.preventDefault();
-    var target = $(this).attr('data-modal');
-    $(target).addClass('is-active');
   });
   $('[data-fancybox]').fancybox({
     loop: true,
     animationEffect: false,
     animationDuration: 0,
-    buttons: ["close"],
+    afterClose: function afterClose() {
+      if ($(window).scrollTop() > 20) {
+        $(".header").addClass("has-scroll");
+      } else {
+        $(".header").removeClass("has-scroll");
+      }
+    },
+    buttons: ["zoom", "close"],
     infobar: false,
     btnTpl: {
-      close: '<button data-fancybox-close class="fancybox-button fancybox-button--close" title="{{CLOSE}}"><svg><use xlink:href="/img/sprites/symbol/sprite.svg#close"></use></svg></button>',
+      close: '<button data-fancybox-close class="fancybox-button fancybox-button--close" title="{{CLOSE}}"></button>',
+      zoom: '<button data-fancybox-zoom class="fancybox-button fancybox-button--zoom" title="{{ZOOM}}"><svg><use xlink:href="/img/sprites/symbol/sprite.svg#zoom"></use></svg></button>',
       arrowLeft: '<button data-fancybox-prev class="fancybox-button fancybox-button--arrow_left" title="{{PREV}}">' + prevArrow + '</button>',
       arrowRight: '<button data-fancybox-next class="fancybox-button fancybox-button--arrow_right" title="{{NEXT}}">' + nextArrow + '</button>'
-    },
-    baseTpl: '<div class="fancybox-container" role="dialog" tabindex="-1">' + '<div class="fancybox-bg"></div>' + '<div class="fancybox-inner">' + '<div class="fancybox-infobar"><span data-fancybox-index></span>&nbsp;/&nbsp;<span data-fancybox-count></span></div>' + '<div class="fancybox-toolbar">{{buttons}}</div>' + '<div class="fancybox-stage"></div>' + '<div class="fancybox-nav-and-caption">' + '<div class="fancybox-navigation">{{arrows}}</div>' + '<div class="fancybox-caption"><div class=""fancybox-caption__body"></div></div>' + '</div>' + '</div>' + '</div>'
-  });
-  $('.filters__toggle-group').click(function (e) {
-    e.preventDefault();
-    var group = $(this).closest('.filters__group');
-    if (group.hasClass('is-disabled')) return;
-    group.toggleClass('is-open');
-  });
-  $('.js-quantity-input').keyup(function (e) {
-    var val = $(this).val();
-    $(this).val(val.replace(/[^0-9]/g, ''));
-  });
-  $('.js-quantity-btn').click(function (e) {
-    console.log('CLICK');
-    e.preventDefault();
-    var input = $(this).closest('.quantity').find('.js-quantity-input');
-    var operation = $(this).attr('data-type');
-    var val = parseInt(input.val()) || 0;
-
-    if (operation === 'minus') {
-      val = val - 1;
-    } else {
-      val = val + 1;
     }
+  }); //code modal
 
-    input.val(val < 0 ? 0 : val);
-  });
-  $('.js-remove-from-cart').click(function (e) {
+  $('.code-card__link').click(function (e) {
     e.preventDefault();
-    $(this).closest('.cart-item').remove();
-    showNotification('Товар удален из корзины!', 'danger');
+    var modal = $($(this).attr('href'));
+    var code = $(this).parents('.code-card').find('pre').clone();
+    modal.find('.code-modal__content').html(code);
+    modal.addClass('is-active');
+    console.log({
+      modal: modal
+    });
+    console.log({
+      code: code
+    });
+    $('html').addClass('code-modal-active');
   });
-  $('.js-add-to-cart').click(function (e) {
+  $('.js-code-modal-close').click(function (e) {
     e.preventDefault();
-    if ($(this).hasClass('in-cart')) return;
-    $(this).addClass('in-cart');
-
-    if ($(this).find('.btn__content').length) {
-      $(this).find('.btn__content').html('В корзине!');
+    $(this).closest('.code-modal').removeClass('is-active');
+    $('html').removeClass('code-modal-active');
+  });
+  $(document).keyup(function (e) {
+    if (e.keyCode === 27) {
+      $('html').removeClass('code-modal-active');
+      $('.code-modal.is-active').removeClass('is-active');
     }
-
-    showNotification('Товар добавлен в корзину!');
   });
-});
+
+  if ($('#map').length) {
+    var init = function init() {
+      var mapOptions = {
+        zoom: 11,
+        fullscreenControl: false,
+        center: new google.maps.LatLng(59.942015, -30.344885),
+        styles: [{
+          "featureType": "water",
+          "elementType": "geometry",
+          "stylers": [{
+            "color": "#e9e9e9"
+          }, {
+            "lightness": 17
+          }]
+        }, {
+          "featureType": "landscape",
+          "elementType": "geometry",
+          "stylers": [{
+            "color": "#f5f5f5"
+          }, {
+            "lightness": 20
+          }]
+        }, {
+          "featureType": "road.highway",
+          "elementType": "geometry.fill",
+          "stylers": [{
+            "color": "#ffffff"
+          }, {
+            "lightness": 17
+          }]
+        }, {
+          "featureType": "road.highway",
+          "elementType": "geometry.stroke",
+          "stylers": [{
+            "color": "#ffffff"
+          }, {
+            "lightness": 29
+          }, {
+            "weight": 0.2
+          }]
+        }, {
+          "featureType": "road.arterial",
+          "elementType": "geometry",
+          "stylers": [{
+            "color": "#ffffff"
+          }, {
+            "lightness": 18
+          }]
+        }, {
+          "featureType": "road.local",
+          "elementType": "geometry",
+          "stylers": [{
+            "color": "#ffffff"
+          }, {
+            "lightness": 16
+          }]
+        }, {
+          "featureType": "poi",
+          "elementType": "geometry",
+          "stylers": [{
+            "color": "#f5f5f5"
+          }, {
+            "lightness": 21
+          }]
+        }, {
+          "featureType": "poi.park",
+          "elementType": "geometry",
+          "stylers": [{
+            "color": "#dedede"
+          }, {
+            "lightness": 21
+          }]
+        }, {
+          "elementType": "labels.text.stroke",
+          "stylers": [{
+            "visibility": "on"
+          }, {
+            "color": "#ffffff"
+          }, {
+            "lightness": 16
+          }]
+        }, {
+          "elementType": "labels.text.fill",
+          "stylers": [{
+            "saturation": 36
+          }, {
+            "color": "#333333"
+          }, {
+            "lightness": 40
+          }]
+        }, {
+          "elementType": "labels.icon",
+          "stylers": [{
+            "visibility": "off"
+          }]
+        }, {
+          "featureType": "transit",
+          "elementType": "geometry",
+          "stylers": [{
+            "color": "#f2f2f2"
+          }, {
+            "lightness": 19
+          }]
+        }, {
+          "featureType": "administrative",
+          "elementType": "geometry.fill",
+          "stylers": [{
+            "color": "#fefefe"
+          }, {
+            "lightness": 20
+          }]
+        }, {
+          "featureType": "administrative",
+          "elementType": "geometry.stroke",
+          "stylers": [{
+            "color": "#fefefe"
+          }, {
+            "lightness": 17
+          }, {
+            "weight": 1.2
+          }]
+        }]
+      };
+      var mapElement = document.getElementById('map');
+      var map = new google.maps.Map(mapElement, mapOptions);
+      var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(59.942015, -30.344885),
+        map: map,
+        title: 'Dolmen',
+        icon: '../img/map-marker.svg'
+      });
+    };
+
+    google.maps.event.addDomListener(window, 'load', init);
+  }
+
+  $('.js-anchor').click(function (e) {
+    e.preventDefault();
+    var target = $($(this).attr('href'));
+    $('html, body').animate({
+      scrollTop: target.offset().top
+    }, 600);
+  });
+}); //masonry grid
+
+function resizeGridItem(item) {
+  var grid = document.getElementsByClassName("masonry")[0];
+  var rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue("grid-auto-rows"));
+  var rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue("grid-row-gap"));
+  var rowSpan = Math.ceil((item.querySelector(".masonry__item-content").getBoundingClientRect().height + 25) / rowHeight);
+  item.style.gridRowEnd = "span " + rowSpan;
+}
+
+function resizeAllGridItems() {
+  var allItems = document.getElementsByClassName("masonry__item");
+
+  for (var x = 0; x < allItems.length; x++) {
+    resizeGridItem(allItems[x]);
+  }
+}
+
+function resizeInstance(instance) {
+  var item = instance.elements[0];
+  resizeGridItem(item);
+}
+
+window.onload = resizeAllGridItems();
+window.addEventListener("resize", resizeAllGridItems);
 //# sourceMappingURL=main.js.map
