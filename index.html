@@ -19,7 +19,7 @@
             <button class="js-toggle-mobile-menu header__menu-btn"><span></span></button>
           </div>
           <div class="header__logo"><a href="#"><img src="img/logo.svg" alt="Dolmen"></a></div>
-          <div class="header__right"> 
+          <div class="header__right">
             <nav class="menu header__menu">
               <ul>
                 <li class="is-active"><a href="#">Products</a></li>
@@ -29,7 +29,18 @@
                 <li><a href="#">Contact</a></li>
               </ul>
             </nav>
+            <button class="header__envelope-btn js-open-modal" data-modal="#presentation-modal "><img src="img/icons/envelope.svg"></button>
             <div class="lang header__lang"><a href="#" tabindex="-1"><span><span class="lang_wrapper"><span class="active">RU</span><span>EN</span></span></span></a></div>
+            <div class="header__mobile-lang">
+              <div class="lang-select">
+                <button class="lang-select__toggle"><span>RU</span>
+                  <svg>
+                    <use xlink:href="/img/sprites/symbol/sprite.svg#chevron-bottom"></use>
+                  </svg>
+                </button>
+                <div class="lang-select__options"> <a class="lang-select__option is-active" href="#">RU  </a><a class="lang-select__option" href="#">EN  </a></div>
+              </div>
+            </div>
           </div>
         </div>
       </header>
@@ -339,6 +350,53 @@
         </div>
       </div>
     </footer>
+    <div class="modal" id="presentation-modal"> 
+      <div class="modal__backdrop js-close-modal"></div>
+      <div class="modal__content"> 
+        <button class="modal__close js-close-modal">
+          <svg>
+            <use xlink:href="/img/sprites/symbol/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <form class="modal-form"> 
+          <div class="modal-form__top">
+            <div class="modal-form__title">Прислать презентацию</div>
+            <div class="modal-form__options"> 
+              <label class="checkbox" for="option-1">
+                <input type="checkbox" id="option-1"><i></i><span>О компании  </span>
+              </label>
+              <label class="checkbox" for="option-2">
+                <input type="checkbox" id="option-2"><i></i><span>О платформе</span>
+              </label>
+              <label class="checkbox" for="option-3">
+                <input type="checkbox" id="option-3"><i></i><span>Об учете и управлении РИД</span>
+              </label>
+            </div>
+          </div>
+          <div class="modal-form__form"> 
+            <div class="modal-form__subtitle">Контактные данные    </div>
+            <div class="modal-form__field">
+              <input class="textfield" type="text" placeholder="Ваше имя *">
+            </div>
+            <div class="modal-form__field">
+              <input class="textfield" type="text" placeholder="E-mail *">
+            </div>
+            <div class="modal-form__field">
+              <input class="textfield" type="text" placeholder="Название компании">
+            </div>
+            <div class="modal-form__field">
+              <input class="textfield" type="text" placeholder="Сфера деятельности">
+            </div>
+            <div class="modal-form__field">
+              <textarea class="textfield" placeholder="Комментарий (контактный телефон / вопрос / пожелание)"></textarea>
+            </div>
+            <div class="modal-form__btn">
+              <button class="btn" type="submit"><span>Отправить</span></button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
     <script src="js/vendor.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaf7K668drB7QOAmvPKV5b_58MJOz9mJI"></script>
     <script src="js/main.js"></script>
